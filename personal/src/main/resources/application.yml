@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: personal
+  datasource:
+    url: jdbc:postgresql://localhost:5432/blogapp
+    username: postgres
+    password: lovedeep
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          format-sql: true
+        show-sql: true
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 2MB
+      max-request-size: 2MB
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: INFO
+cloudinary:
+  cloud_name: 'dvgesml72'
+  api_key: '111259553839349'
+  api_secret: 'FQWb_4yrvRYjxdjnksb72fAS-Ew'
